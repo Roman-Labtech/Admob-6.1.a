@@ -13432,7 +13432,7 @@ ion-img {
   display: inline-block;
   min-width: 20px;
   min-height: 20px;
-  background: #eee;
+  background: rgba(238, 238, 238, 0);
   contain: strict;
 }
 
