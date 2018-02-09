@@ -74,6 +74,7 @@ if (isFinite(c) &&(c>0 && c<180)){
 
 	s=Math.sin(c / 180 * Math.PI);	
 	s=(0.5)*(s*a*b);	
+	s=s.toFixed(4);
 	let alert = this.alertCtrl.create({
       title: 'РЕЗУЛЬТАТ',
       subTitle: 'Площадь равна S=' + s,

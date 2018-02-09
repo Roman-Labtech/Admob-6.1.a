@@ -70,6 +70,7 @@ if (isFinite(c) &&(c>0)){
 						xx=xx*(xx-a)*(xx-b)*(xx-c)						
 						xx=Math.sqrt(xx);
 						s=xx;
+						s=s.toFixed(4);
 				     let alert = this.alertCtrl.create({
       title: 'РЕЗУЛЬТАТ',
       subTitle: 'Площадь равна S=' + s,

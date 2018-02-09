@@ -95,7 +95,7 @@ if (isFinite(h) &&(h>0)){
 
     s=(a)*0.5*h;
     if(numchislo=3){
-        s=s.toFixed(numchislo); 
+        s=s.toFixed(4); 
     }
     
 	let alert = this.alertCtrl.create({
