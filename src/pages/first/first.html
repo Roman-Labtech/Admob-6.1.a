@@ -27,49 +27,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Площадь</ion-title>
+    <ion-title>Площадь треугольника</ion-title>
 
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="background:url(assets/imgs/bg.png);">
   <h3 style="text-align: center">По основанию и высоте</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
- 
-  <br>
-  
-<!-- <ion-card (click)="link3stor()">
-  <ion-card-header>
-	<b>По трем сторонам</b>
-  </ion-card-header>
-  <ion-card-content>
-     The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-  </ion-card-content>
-</ion-card>
-
-
-  <ion-card (click)="showAlert()">
-  <ion-card-header>
-	  <b>По основанию и высоте</b>
-  </ion-card-header>
-  <ion-card-content>
-    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-  </ion-card-content>
-</ion-card>
- 
-  <ion-card (click)="showAlert()">
-  <ion-card-header>
-	  <b>По 2-м сторонам и углу</b>
-  </ion-card-header>
-  <ion-card-content>
-    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-  </ion-card-content>
-</ion-card>
- -->
-  <br>
      <ion-img style="width:100%; height: 235px;" src="assets/imgs/Osnivysota1.jpg"></ion-img>
      <br>
      <br>
@@ -96,12 +61,15 @@
      <button ion-button (click)="osn_i_vysota()">
       ВЫЧИСЛИТЬ
     </button>
-     <button ion-button (click)="osn_i_vysota_clear()" color="red-danger">
+     <button ion-button (click)="osn_i_vysota_clear()" color="red-danger" style="float:right">
       ОЧИСТИТЬ
     </button>
     </div>
   </div> 
-
+ <p>
+    Формула расчета площади треугольника по извесным основанию и высоте.
+      <ion-img iom-imgalign style="width:100%; height: 53px; background-color: white" src="assets/imgs/Osnivysota.jpg"></ion-img> 
+  </p>
        
 
 </ion-content>

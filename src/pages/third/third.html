@@ -27,45 +27,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Площадь test 2</ion-title>
+    <ion-title>Площадь треугольника</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="background:url(assets/imgs/bg.png);">
   <h3 style="text-align: center">По двум сторонам <br>и углу между ними</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
- 
-  <br>
-<!-- <ion-card (click)="link3stor()">
-  <ion-card-header>
-	  <b>По трем сторонам</b>
-  </ion-card-header>
-  <ion-card-content>
-    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-  </ion-card-content>
-</ion-card>
-
-  <ion-card (click)="showAlert()">
-  <ion-card-header>
-	  <b>По основанию и высоте</b>
-  </ion-card-header>
-  <ion-card-content>
-    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-  </ion-card-content>
-</ion-card>
- 
-  <ion-card (click)="showAlert()">
-  <ion-card-header>
-	  <b>По 2-м сторонам и углу</b>
-  </ion-card-header>
-  <ion-card-content>
-    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-  </ion-card-content>
-</ion-card>
- -->
       <ion-img style="width:100%; height: 235px;"  src="assets/imgs/2storiygol.jpg"></ion-img>
   <br>
 <ion-list>
@@ -82,7 +50,7 @@
   </ion-item>
  <br>
    <ion-item>
-     <ion-label color="primary" fixed>Угол a (град.) </ion-label>
+     <ion-label color="primary" fixed>Угол (град.) </ion-label>
     <ion-input type="number" placeholder="....." id="inp3" [(ngModel)]="inp3" ></ion-input>
   </ion-item><br>
 
@@ -92,10 +60,13 @@
     <button ion-button (click)="ygol_i_2_storony()">
       ВЫЧИСЛИТЬ
     </button>
-     <button ion-button (click)="ygol_i_2_storony_clear()" color="red-danger">
+     <button ion-button (click)="ygol_i_2_storony_clear()" color="red-danger" style="float:right">
       ОЧИСТИТЬ
     </button>
        
-   
+    <p>
+    Площадь треугольника по двум известным сторонам и углу между ними рассчитывается по формуле
+       <ion-img iom-imgalign style="width:100%; height: 50px; background-color: white" src="assets/imgs/2storiygol1.jpg"></ion-img> 
+  </p>
 
 </ion-content>

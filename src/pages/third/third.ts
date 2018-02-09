@@ -48,7 +48,7 @@ export class ThirdPage {
 	
 	public inp1;
 	public inp2;
-	public inp4;
+	public inp3;
 	
 
 	
@@ -62,7 +62,7 @@ export class ThirdPage {
 	ygol_i_2_storony() {	
 	var a=Number(this.inp1);
 	var b=Number(this.inp2);	
-	var c=Number(this.inp4);
+	var c=Number(this.inp3);
 	var s;
    ////////////////////////////////
 		var xx;
@@ -75,7 +75,7 @@ if (isFinite(c) &&(c>0 && c<180)){
 	s=Math.sin(c / 180 * Math.PI);	
 	s=(0.5)*(s*a*b);	
 	let alert = this.alertCtrl.create({
-      title: 'New Friend!',
+      title: 'РЕЗУЛЬТАТ',
       subTitle: 'Площадь равна S=' + s,
       buttons: ['OK']
     });

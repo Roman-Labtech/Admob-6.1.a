@@ -99,7 +99,7 @@ if (isFinite(h) &&(h>0)){
     }
     
 	let alert = this.alertCtrl.create({
-      title: 'New Friend!',
+      title: 'РЕЗУЛЬТАТ',
       subTitle: 'Площадь равна S=' + s,
       buttons: ['OK']
     });

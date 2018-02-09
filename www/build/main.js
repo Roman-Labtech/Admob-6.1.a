@@ -127,29 +127,29 @@ var FirstPage = (function () {
                 if (numchislo = 3) {
                     s = s.toFixed(numchislo);
                 }
-                var alert_1 = this.alertCtrl.create({
-                    title: 'New Friend!',
+                var alert = this.alertCtrl.create({
+                    title: 'РЕЗУЛЬТАТ',
                     subTitle: 'Площадь равна S=' + s,
                     buttons: ['OK']
                 });
-                alert_1.present();
+                alert.present();
             }
             else {
-                var alert_2 = this.alertCtrl.create({
+                var alert = this.alertCtrl.create({
                     title: 'Ошибка!',
                     subTitle: 'Введите верное числовое значение. Треугольник с такими сторонами не существует',
                     buttons: ['OK']
                 });
-                alert_2.present();
+                alert.present();
             }
         }
         else {
-            var alert_3 = this.alertCtrl.create({
+            var alert = this.alertCtrl.create({
                 title: 'Ошибка!',
                 subTitle: 'Введите верное числовое значение. Треугольник с такими сторонами не существует',
                 buttons: ['OK']
             });
-            alert_3.present();
+            alert.present();
         }
         ;
     };
@@ -162,12 +162,12 @@ var FirstPage = (function () {
     };
     FirstPage = FirstPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'first-home',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\first\first.html"*/'<ion-header>\n <ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="openPage(homePage)">\n        Т\n      </button>\n      <button ion-item (click)="openPage(friendsPage)">\n        Friends\n      </button>\n      <button ion-item (click)="openPage(eventsPage)">\n        Events\n      </button>\n      <button ion-item (click)="closeMenu()">\n        Close Menu\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n \n  <ion-navbar color="red-danger">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Площадь</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3 style="text-align: center">По основанию и высоте</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n \n  <br>\n  \n<!-- <ion-card (click)="link3stor()">\n  <ion-card-header>\n	<b>По трем сторонам</b>\n  </ion-card-header>\n  <ion-card-content>\n     The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n\n\n  <ion-card (click)="showAlert()">\n  <ion-card-header>\n	  <b>По основанию и высоте</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n \n  <ion-card (click)="showAlert()">\n  <ion-card-header>\n	  <b>По 2-м сторонам и углу</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n -->\n  <br>\n     <ion-img style="width:100%; height: 235px;" src="assets/imgs/Osnivysota1.jpg"></ion-img>\n     <br>\n     <br>\n<ion-list>\n\n  \n    <ion-item>\n    <ion-label color="primary" fixed>Основание</ion-label>\n    <ion-input type="number" placeholder="....." id="inp1" [(ngModel)]="inp1"></ion-input>\n  </ion-item>\n <br>\n   <ion-item>\n     <ion-label color="primary" fixed>Высота</ion-label>\n    <ion-input type="number" placeholder="....." id="inp2" [(ngModel)]="inp2" ></ion-input>\n  </ion-item><br>\n</ion-list>\n\n\n    \n\n       \n  <div style="">\n   <div style="margin: auto">\n     <button ion-button (click)="osn_i_vysota()">\n      ВЫЧИСЛИТЬ\n    </button>\n     <button ion-button (click)="osn_i_vysota_clear()" color="red-danger">\n      ОЧИСТИТЬ\n    </button>\n    </div>\n  </div> \n\n       \n\n</ion-content>'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\first\first.html"*/
+            selector: 'first-home',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\first\first.html"*/'<ion-header>\n <ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="openPage(homePage)">\n        Т\n      </button>\n      <button ion-item (click)="openPage(friendsPage)">\n        Friends\n      </button>\n      <button ion-item (click)="openPage(eventsPage)">\n        Events\n      </button>\n      <button ion-item (click)="closeMenu()">\n        Close Menu\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n \n  <ion-navbar color="red-danger">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Площадь треугольника</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:url(assets/imgs/bg.png);">\n  <h3 style="text-align: center">По основанию и высоте</h3>\n\n     <ion-img style="width:100%; height: 235px;" src="assets/imgs/Osnivysota1.jpg"></ion-img>\n     <br>\n     <br>\n<ion-list>\n\n  \n    <ion-item>\n    <ion-label color="primary" fixed>Основание</ion-label>\n    <ion-input type="number" placeholder="....." id="inp1" [(ngModel)]="inp1"></ion-input>\n  </ion-item>\n <br>\n   <ion-item>\n     <ion-label color="primary" fixed>Высота</ion-label>\n    <ion-input type="number" placeholder="....." id="inp2" [(ngModel)]="inp2" ></ion-input>\n  </ion-item><br>\n</ion-list>\n\n\n    \n\n       \n  <div style="">\n   <div style="margin: auto">\n     <button ion-button (click)="osn_i_vysota()">\n      ВЫЧИСЛИТЬ\n    </button>\n     <button ion-button (click)="osn_i_vysota_clear()" color="red-danger" style="float:right">\n      ОЧИСТИТЬ\n    </button>\n    </div>\n  </div> \n <p>\n    Формула расчета площади треугольника по извесным основанию и высоте.\n      <ion-img iom-imgalign style="width:100%; height: 53px; background-color: white" src="assets/imgs/Osnivysota.jpg"></ion-img> \n  </p>\n       \n\n</ion-content>'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\first\first.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object])
     ], FirstPage);
     return FirstPage;
-    var FirstPage_1;
+    var FirstPage_1, _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=first.js.map
@@ -249,58 +249,58 @@ var SecondPage = (function () {
                                 xx = xx * (xx - a) * (xx - b) * (xx - c);
                                 xx = Math.sqrt(xx);
                                 s = xx;
-                                var alert_1 = this.alertCtrl.create({
-                                    title: 'New Friend!',
+                                var alert = this.alertCtrl.create({
+                                    title: 'РЕЗУЛЬТАТ',
                                     subTitle: 'Площадь равна S=' + s,
                                     buttons: ['OK']
                                 });
-                                alert_1.present();
+                                alert.present();
                             }
                             else {
-                                var alert_2 = this.alertCtrl.create({
+                                var alert = this.alertCtrl.create({
                                     title: 'Ошибка!',
                                     subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
                                     buttons: ['OK']
                                 });
-                                alert_2.present();
+                                alert.present();
                             }
                         }
                         else {
-                            var alert_3 = this.alertCtrl.create({
+                            var alert = this.alertCtrl.create({
                                 title: 'Ошибка!',
                                 subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
                                 buttons: ['OK']
                             });
-                            alert_3.present();
+                            alert.present();
                         }
                     }
                     else {
-                        var alert_4 = this.alertCtrl.create({
+                        var alert = this.alertCtrl.create({
                             title: 'Ошибка!',
                             subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
                             buttons: ['OK']
                         });
-                        alert_4.present();
+                        alert.present();
                     }
                     ;
                 }
             }
             else {
-                var alert_5 = this.alertCtrl.create({
+                var alert = this.alertCtrl.create({
                     title: 'Ошибка!',
                     subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
                     buttons: ['OK']
                 });
-                alert_5.present();
+                alert.present();
             }
         }
         else {
-            var alert_6 = this.alertCtrl.create({
+            var alert = this.alertCtrl.create({
                 title: 'Ошибка!',
                 subTitle: 'Треугольник с такими сторонами не существует. Введите корректные значения',
                 buttons: ['OK']
             });
-            alert_6.present();
+            alert.present();
         }
         ;
         //////////////
@@ -316,11 +316,12 @@ var SecondPage = (function () {
     };
     SecondPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'second-home',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\second\second.html"*/'<ion-header>\n <ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="openPage(homePage)">\n        Т\n      </button>\n      <button ion-item (click)="openPage(friendsPage)">\n        Friends\n      </button>\n      <button ion-item (click)="openPage(eventsPage)">\n        Events\n      </button>\n      <button ion-item (click)="closeMenu()">\n        Close Menu\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n \n  <ion-navbar color="red-danger">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Площадь</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3 style="text-align: center; color:white;">По трем сторонам</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n \n  <br>\n<!-- <ion-card (click)="link3stor()">\n  <ion-card-header>\n	  <b>По трем сторонам</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n\n  <ion-card (click)="showAlert()">\n  <ion-card-header>\n	  <b>По основанию и высоте</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n \n  <ion-card (click)="showAlert()">\n  <ion-card-header>\n	  <b>По 2-м сторонам и углу</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n -->\n      <div>\n      <p style="text-align: center;">\n           <ion-img iom-imgalign style="width:100%; height: 235px;" src="assets/imgs/geron.jpg"></ion-img>\n	  </p>  	\n      </div>\n  \n\n  <br>\n<ion-list>\n\n  \n    <ion-item>\n    <ion-label color="primary" fixed>Сторона A</ion-label>\n    <ion-input type="number" placeholder="....." id="inp1" [(ngModel)]="inp1"></ion-input>\n  </ion-item>\n <br>\n  <ion-item>\n    <ion-label color="primary" fixed>Сторона B</ion-label>\n    <ion-input type="number" placeholder="....." id="inp2" [(ngModel)]="inp2"></ion-input>\n  </ion-item>\n <br>\n   <ion-item>\n     <ion-label color="primary" fixed>Сторона C</ion-label>\n    <ion-input type="number" placeholder="....." id="inp3" [(ngModel)]="inp3" ></ion-input>\n  </ion-item><br>\n\n\n</ion-list>\n\n\n  <div style="">\n   <div style="margin: auto">\n    <button ion-button (click)="tri_storony()">\n      ВЫЧИСЛИТЬ\n    </button>\n          <button ion-button (click)="tri_storony_clear()" color="red-danger">\n      ОЧИСТИТЬ\n    </button>\n    </div>\n  </div>     \n\n       \n\n       \n\n</ion-content>'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\second\second.html"*/
+            selector: 'second-home',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\second\second.html"*/'<ion-header>\n <ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="openPage(homePage)">\n        Т\n      </button>\n      <button ion-item (click)="openPage(friendsPage)">\n        Friends\n      </button>\n      <button ion-item (click)="openPage(eventsPage)">\n        Events\n      </button>\n      <button ion-item (click)="closeMenu()">\n        Close Menu\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n \n  <ion-navbar color="red-danger">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Площадь треугольника</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:url(assets/imgs/bg.png);">\n  <h3 style="text-align: center">По трем сторонам</h3>\n\n      <div>\n      <p style="text-align: center;">\n           <ion-img iom-imgalign style="width:100%; height: 235px;" src="assets/imgs/geron.jpg"></ion-img>\n	  </p>  	\n      </div>\n  \n\n  <br>\n<ion-list>\n\n  \n    <ion-item>\n    <ion-label color="primary" fixed>Сторона A</ion-label>\n    <ion-input type="number" placeholder="....." id="inp1" [(ngModel)]="inp1"></ion-input>\n  </ion-item>\n <br>\n  <ion-item>\n    <ion-label color="primary" fixed>Сторона B</ion-label>\n    <ion-input type="number" placeholder="....." id="inp2" [(ngModel)]="inp2"></ion-input>\n  </ion-item>\n <br>\n   <ion-item>\n     <ion-label color="primary" fixed>Сторона C</ion-label>\n    <ion-input type="number" placeholder="....." id="inp3" [(ngModel)]="inp3" ></ion-input>\n  </ion-item><br>\n\n\n</ion-list>\n\n\n  <div style="">\n   <div style="margin: auto">\n    <button ion-button (click)="tri_storony()">\n      ВЫЧИСЛИТЬ\n    </button>\n          <button ion-button (click)="tri_storony_clear()" color="red-danger" style="float:right">\n      ОЧИСТИТЬ\n    </button>\n    </div>\n  </div>    \n   <p> \n     Площадь треугольника с известными тремя сторонами рассчитывается по формуле Герона:\n  <ion-img iom-imgalign style="width:100%; height: 50px; background-color: white" src="assets/imgs/GERON1.jpg"></ion-img>\n      Где р-полупериметр треугольника:\n\n\n    <ion-img iom-imgalign style="width:100%; height: 50px; background-color: white" src="assets/imgs/GERON2.jpg"></ion-img> \n    \n  </p>\n       \n\n</ion-content>'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\second\second.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object])
     ], SecondPage);
     return SecondPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=second.js.map
@@ -390,7 +391,7 @@ var ThirdPage = (function () {
     ThirdPage.prototype.ygol_i_2_storony = function () {
         var a = Number(this.inp1);
         var b = Number(this.inp2);
-        var c = Number(this.inp4);
+        var c = Number(this.inp3);
         var s;
         ////////////////////////////////
         var xx;
@@ -402,7 +403,7 @@ var ThirdPage = (function () {
                     s = Math.sin(c / 180 * Math.PI);
                     s = (0.5) * (s * a * b);
                     var alert = this.alertCtrl.create({
-                        title: 'New Friend!',
+                        title: 'РЕЗУЛЬТАТ',
                         subTitle: 'Площадь равна S=' + s,
                         buttons: ['OK']
                     });
@@ -491,7 +492,7 @@ var ThirdPage = (function () {
     };
     ThirdPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'third-home',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\third\third.html"*/'<ion-header>\n <ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="openPage(homePage)">\n        Т\n      </button>\n      <button ion-item (click)="openPage(friendsPage)">\n        Friends\n      </button>\n      <button ion-item (click)="openPage(eventsPage)">\n        Events\n      </button>\n      <button ion-item (click)="closeMenu()">\n        Close Menu\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n \n  <ion-navbar color="red-danger">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Площадь test 2</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3 style="text-align: center">По двум сторонам <br>и углу между ними</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n \n  <br>\n<!-- <ion-card (click)="link3stor()">\n  <ion-card-header>\n	  <b>По трем сторонам</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n\n  <ion-card (click)="showAlert()">\n  <ion-card-header>\n	  <b>По основанию и высоте</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n \n  <ion-card (click)="showAlert()">\n  <ion-card-header>\n	  <b>По 2-м сторонам и углу</b>\n  </ion-card-header>\n  <ion-card-content>\n    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.\n  </ion-card-content>\n</ion-card>\n -->\n      <ion-img style="width:100%; height: 235px;"  src="assets/imgs/2storiygol.jpg"></ion-img>\n  <br>\n<ion-list>\n\n  \n    <ion-item>\n    <ion-label color="primary" fixed>Сторона A</ion-label>\n    <ion-input type="number" placeholder="....." id="inp1" [(ngModel)]="inp1"></ion-input>\n  </ion-item>\n <br>\n  <ion-item>\n    <ion-label color="primary" fixed>Сторона B</ion-label>\n    <ion-input type="number" placeholder="....." id="inp2" [(ngModel)]="inp2"></ion-input>\n  </ion-item>\n <br>\n   <ion-item>\n     <ion-label color="primary" fixed>Угол a (град.) </ion-label>\n    <ion-input type="number" placeholder="....." id="inp3" [(ngModel)]="inp3" ></ion-input>\n  </ion-item><br>\n\n</ion-list>\n\n    \n    <button ion-button (click)="ygol_i_2_storony()">\n      ВЫЧИСЛИТЬ\n    </button>\n     <button ion-button (click)="ygol_i_2_storony_clear()" color="red-danger">\n      ОЧИСТИТЬ\n    </button>\n       \n   \n\n</ion-content>'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\third\third.html"*/
+            selector: 'third-home',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\third\third.html"*/'<ion-header>\n <ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="openPage(homePage)">\n        Т\n      </button>\n      <button ion-item (click)="openPage(friendsPage)">\n        Friends\n      </button>\n      <button ion-item (click)="openPage(eventsPage)">\n        Events\n      </button>\n      <button ion-item (click)="closeMenu()">\n        Close Menu\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n \n  <ion-navbar color="red-danger">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Площадь треугольника</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:url(assets/imgs/bg.png);">\n  <h3 style="text-align: center">По двум сторонам <br>и углу между ними</h3>\n\n      <ion-img style="width:100%; height: 235px;"  src="assets/imgs/2storiygol.jpg"></ion-img>\n  <br>\n<ion-list>\n\n  \n    <ion-item>\n    <ion-label color="primary" fixed>Сторона A</ion-label>\n    <ion-input type="number" placeholder="....." id="inp1" [(ngModel)]="inp1"></ion-input>\n  </ion-item>\n <br>\n  <ion-item>\n    <ion-label color="primary" fixed>Сторона B</ion-label>\n    <ion-input type="number" placeholder="....." id="inp2" [(ngModel)]="inp2"></ion-input>\n  </ion-item>\n <br>\n   <ion-item>\n     <ion-label color="primary" fixed>Угол (град.) </ion-label>\n    <ion-input type="number" placeholder="....." id="inp3" [(ngModel)]="inp3" ></ion-input>\n  </ion-item><br>\n\n</ion-list>\n\n    \n    <button ion-button (click)="ygol_i_2_storony()">\n      ВЫЧИСЛИТЬ\n    </button>\n     <button ion-button (click)="ygol_i_2_storony_clear()" color="red-danger" style="float:right">\n      ОЧИСТИТЬ\n    </button>\n       \n    <p>\n    Площадь треугольника по двум известным сторонам и углу между ними рассчитывается по формуле\n       <ion-img iom-imgalign style="width:100%; height: 50px; background-color: white" src="assets/imgs/2storiygol1.jpg"></ion-img> \n  </p>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\third\third.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object])
     ], ThirdPage);
@@ -548,7 +549,7 @@ var ListPage = (function () {
     };
     ListPage = ListPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\list\list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>List 1</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\list\list.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\list\list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu">222</ion-icon>\n    </button>\n    <ion-title>List 1</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon [name]="item.icon" item-start></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-end>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <div *ngIf="selectedItem" padding>\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\list\list.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], ListPage);
@@ -713,7 +714,7 @@ var MyApp = (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Катя\admob6\src\app\app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu --</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Users\Катя\admob6\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Катя\admob6\src\app\app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title></ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Users\Катя\admob6\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -800,7 +801,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\home\home.html"*/'<ion-header>\n <ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="openPage(homePage)">\n        Т\n      </button>\n      <button ion-item (click)="openPage(friendsPage)">\n        Friends\n      </button>\n      <button ion-item (click)="openPage(eventsPage)">\n        Events\n      </button>\n      <button ion-item (click)="closeMenu()">\n        Close Menu\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n \n  <ion-navbar color="red-danger">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>S треугольника</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:url(assets/imgs/bg.png);">\n \n  <h3 style="text-align: center">Ionic Menu Starter 6.1</h3>\n   <ion-img width="100%" src="/assets/imgs/baikal.jpg"></ion-img>\n   <ion-img width="100%" src="geron.jpg"></ion-img>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n  <br>\n\n  <br>\n <ion-card (click)="firstgo()">\n  <ion-card-header>\n	  <b>По основанию и высоте</b>\n  </ion-card-header>\n  <ion-card-content>\n    Формула нахождения площади треугольника по основанию и высоте.\n  </ion-card-content>\n</ion-card>\n\n  <ion-card (click)="secondgo()">\n  <ion-card-header>\n	  <b>По трем сторонам</b>\n  </ion-card-header>\n  <ion-card-content>\n    Формула Герона для нахождения площади треугольника по трем известным сторонам.\n  </ion-card-content>\n</ion-card>\n \n  <ion-card (click)="thirdgo()">\n  <ion-card-header>\n	  <b>По 2-м сторонам и углу</b>\n  </ion-card-header>\n  <ion-card-content>\n  Формула нахождения площади треугольника по двум сторонам и углу между ними.\n  </ion-card-content>\n</ion-card>\n  <br>\n\n\n<div style="background:url(resources/ios/icon/icon-76@2x.png)"></div>\n	\n\n\n    <br><br>\n    <button ion-button (click)="ygol_i_2_storony1()">Test</button>\n<br><br>\n      <button ion-button secondary (click)="showAlert()" >Show banner</button>\n<br><br>\n    <button ion-button (click)="showInterstitialAd()">Show the interstitial Ad</button>\n    <br><br>\n    \n\n       \n\n       \n\n</ion-content>'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Катя\admob6\src\pages\home\home.html"*/'<ion-header>\n <ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n</ion-menu>\n \n  <ion-navbar color="red-danger">\n<!--    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>-->\n    <ion-title style="text-align: center">Расчет площади треугольника</ion-title>\n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding style="background:url(assets/imgs/bg.png);">\n \n  <h3 style="text-align: center">Расчет площади треугольника</h3>\n\n  <p style="text-align: justify">\n    Данный калькулятор поможет легко рассчитать площадь треугольника по извесным величинам.\n  </p>\n\n <ion-card (click)="firstgo()">\n  <ion-card-header>\n	  <b>По основанию и высоте</b>\n  </ion-card-header>\n  <ion-card-content>\n    Формула нахождения площади треугольника по основанию и высоте.\n  </ion-card-content>\n</ion-card>\n\n  <ion-card (click)="secondgo()">\n  <ion-card-header>\n	  <b>По трем сторонам</b>\n  </ion-card-header>\n  <ion-card-content>\n    Формула Герона для нахождения площади треугольника по трем известным сторонам.\n  </ion-card-content>\n</ion-card>\n \n  <ion-card (click)="thirdgo()">\n  <ion-card-header>\n	  <b>По 2-м сторонам и углу</b>\n  </ion-card-header>\n  <ion-card-content>\n  Формула нахождения площади треугольника по двум сторонам и углу между ними.\n  </ion-card-content>\n</ion-card>\n  <br>\n\n\n<div style="background:url(resources/ios/icon/icon-76@2x.png)"></div>\n	\n\n<!--\n    <br><br>\n    <button ion-button (click)="ygol_i_2_storony1()">Test</button>\n<br><br>\n      <button ion-button secondary (click)="showAlert()" >Show banner</button>\n<br><br>\n    <button ion-button (click)="showInterstitialAd()">Show the interstitial Ad</button>\n    <br><br>\n-->    \n\n       \n\n       \n\n</ion-content>'/*ion-inline-end:"C:\Users\Катя\admob6\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_admob_pro__["a" /* AdMobPro */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], HomePage);

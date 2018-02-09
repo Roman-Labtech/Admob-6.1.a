@@ -4408,6 +4408,8 @@ ion-alert input {
 
 .alert-md .alert-title {
   font-size: 22px;
+  text-align: center;
+	color: darkred;
 }
 
 .alert-md .alert-sub-title {
@@ -13430,6 +13432,7 @@ ion-img {
   display: inline-block;
   min-width: 20px;
   min-height: 20px;
+  background: #eee;
   contain: strict;
 }
 

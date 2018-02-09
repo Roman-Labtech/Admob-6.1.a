@@ -27,46 +27,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Площадь</ion-title>
+    <ion-title>Площадь треугольника</ion-title>
 
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3 style="text-align: center; color:white;">По трем сторонам</h3>
+<ion-content padding style="background:url(assets/imgs/bg.png);">
+  <h3 style="text-align: center">По трем сторонам</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
- 
-  <br>
-<!-- <ion-card (click)="link3stor()">
-  <ion-card-header>
-	  <b>По трем сторонам</b>
-  </ion-card-header>
-  <ion-card-content>
-    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-  </ion-card-content>
-</ion-card>
-
-  <ion-card (click)="showAlert()">
-  <ion-card-header>
-	  <b>По основанию и высоте</b>
-  </ion-card-header>
-  <ion-card-content>
-    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-  </ion-card-content>
-</ion-card>
- 
-  <ion-card (click)="showAlert()">
-  <ion-card-header>
-	  <b>По 2-м сторонам и углу</b>
-  </ion-card-header>
-  <ion-card-content>
-    The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-  </ion-card-content>
-</ion-card>
- -->
       <div>
       <p style="text-align: center;">
            <ion-img iom-imgalign style="width:100%; height: 235px;" src="assets/imgs/geron.jpg"></ion-img>
@@ -102,14 +70,20 @@
     <button ion-button (click)="tri_storony()">
       ВЫЧИСЛИТЬ
     </button>
-          <button ion-button (click)="tri_storony_clear()" color="red-danger">
+          <button ion-button (click)="tri_storony_clear()" color="red-danger" style="float:right">
       ОЧИСТИТЬ
     </button>
     </div>
-  </div>     
+  </div>    
+   <p> 
+     Площадь треугольника с известными тремя сторонами рассчитывается по формуле Герона:
+  <ion-img iom-imgalign style="width:100%; height: 50px; background-color: white" src="assets/imgs/GERON1.jpg"></ion-img>
+      Где р-полупериметр треугольника:
 
-       
 
+    <ion-img iom-imgalign style="width:100%; height: 50px; background-color: white" src="assets/imgs/GERON2.jpg"></ion-img> 
+    
+  </p>
        
 
 </ion-content>

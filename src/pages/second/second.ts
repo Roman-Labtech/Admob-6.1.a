@@ -71,7 +71,7 @@ if (isFinite(c) &&(c>0)){
 						xx=Math.sqrt(xx);
 						s=xx;
 				     let alert = this.alertCtrl.create({
-      title: 'New Friend!',
+      title: 'РЕЗУЛЬТАТ',
       subTitle: 'Площадь равна S=' + s,
       buttons: ['OK']
     });
